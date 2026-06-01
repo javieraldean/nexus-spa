@@ -1,0 +1,166 @@
+/* =============================================
+   LIBRARY PAGE — Catalog · Detail
+   ============================================= */
+
+/* ── Featured section (Home) ── */
+.featured {
+  padding: 1rem 0 2rem;
+}
+
+.featured h2 {
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+  letter-spacing: -0.02em;
+}
+
+.section-heading {
+  margin-bottom: 1.5rem;
+}
+
+.section-heading h2 {
+  font-size: 1.6rem;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.35rem;
+}
+
+.section-heading p {
+  color: #5b667a;
+  margin: 0;
+}
+
+/* ── Catalog layout ── */
+.catalog-page {
+  min-height: 70vh;
+}
+
+.catalog-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding-top: 0.5rem;
+}
+
+.catalog-main {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.catalog-results {
+  padding-bottom: 2rem;
+}
+
+/* ── Book / Item detail layout ── */
+.detail-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+  background: #ffffff;
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+}
+
+.detail-media img {
+  width: 100%;
+  max-height: 420px;
+  object-fit: cover;
+  border-radius: var(--radius);
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.1);
+}
+
+.detail-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.detail-category {
+  display: inline-flex;
+  align-self: flex-start;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  background: rgba(31, 60, 136, 0.08);
+  padding: 4px 10px;
+  border-radius: 999px;
+  margin-bottom: 0.65rem;
+}
+
+.detail-title {
+  font-size: clamp(1.5rem, 4vw, 2.2rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  margin: 0 0 1rem;
+}
+
+.detail-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  background: rgba(31, 60, 136, 0.04);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 0.85rem 1rem;
+  margin-bottom: 1.1rem;
+}
+
+.detail-meta p {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.detail-price {
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: var(--color-secondary);
+  margin: 0 0 1rem;
+}
+
+.detail-description {
+  color: #445166;
+  line-height: 1.75;
+  margin: 0 0 1.75rem;
+}
+
+.detail-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.back-link {
+  display: inline-block;
+  color: var(--color-primary);
+  text-decoration: none;
+  font-weight: 600;
+  margin-bottom: 1.25rem;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+/* ── Responsive ── */
+@media (min-width: 768px) {
+  .catalog-layout {
+    flex-direction: row;
+    align-items: stretch;
+  }
+
+  .detail-layout {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .detail-media,
+  .detail-info {
+    flex: 1;
+  }
+
+  .detail-actions {
+    flex-direction: row;
+  }
+}
