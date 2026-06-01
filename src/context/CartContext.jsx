@@ -14,7 +14,6 @@ export function CartProvider({ children }) {
     }
   });
 
-  // Persist to localStorage whenever items change
   useEffect(() => {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(items));
   }, [items]);
@@ -78,6 +77,6 @@ export function CartProvider({ children }) {
 
 export function useCart() {
   const ctx = useContext(CartContext);
-  if (!ctx) throw new Error("useCart must be used inside CartProvider");
+  if (!ctx) throw new Error("useCart debe usarse dentro de CartProvider");
   return ctx;
 }
